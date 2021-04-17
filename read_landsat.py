@@ -32,10 +32,10 @@ for i in range(len(data_list)):
 	# Cloud bit is in position 5
 	water_mask = (im_QA >> 4) & 0b11111
 
-	water_mask_hold = water_mask
+	#water_mask_hold = water_mask
 
-	water_mask = water_mask == 28
-	water_mask = water_mask.astype(np.uint8)
+	#water_mask = water_mask == 28
+	#water_mask = water_mask.astype(np.uint8)
 
 	CORNER_UL_LAT_PRODUCT = 0
 	CORNER_UL_LON_PRODUCT = 0
@@ -99,9 +99,9 @@ for i in range(len(data_list)):
 	if(lonPixelDiffSE > im_rgb.shape[1]-1):
 		lonPixelDiffSE = im_rgb.shape[1]-1
 
-	plt.figure()
-	plt.imshow(water_mask_hold[latPixelDiffNW:latPixelDiffSE, lonPixelDiffNW:lonPixelDiffSE])
-	plt.colorbar()
+	#plt.figure()
+	#plt.imshow(water_mask_hold[latPixelDiffNW:latPixelDiffSE, lonPixelDiffNW:lonPixelDiffSE])
+	#plt.colorbar()
 
 	# Characteristics of Landsat 8
 	# See: https://en.wikipedia.org/wiki/Landsat_8
